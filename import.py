@@ -1,5 +1,5 @@
-import practice.biile#フルpass
-#from practice import biile
+#import practice.tools.biile#フルpass
+from practice.tools import biile
 
-r = practice.biile.say_twice('Hello')#fromの場合はファイル名だけ
+r = biile.say_twice('Hello')#fromの場合はファイル名だけ
 print(r)
