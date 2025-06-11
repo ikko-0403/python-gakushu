@@ -1,0 +1,11 @@
+README.md
+setup.py
+practice/talk/__init__.py
+practice/talk/animal.py
+practice/talk/human.py
+practice/tools/__init__.py
+practice/tools/biile.py
+python_programming.egg-info/PKG-INFO
+python_programming.egg-info/SOURCES.txt
+python_programming.egg-info/dependency_links.txt
+python_programming.egg-info/top_level.txt
