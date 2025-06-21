@@ -9,23 +9,27 @@ class ToyotaCar(Car):
         print('fast')
 
 class TeslaCar(Car):
-    def __init__(self, model='Model S', enable_auto_run=False):
+    def __init__(self, model='Model S', 
+    enable_auto_run=False,
+    passwd='123'):
         #self.model = model
         super().__init__(model)#親変数のものにあやかる
         self._enable_auto_run = enable_auto_run
+        self.passwd = passwd
+
+#ある条件を満たせば書き換えて良いよ
+    @property
+    def enable_auto_run(self):
+        return self._enable_auto_run
+    
+    @enable_auto_run.setter
+    def enable_auto_run(self, value):
+        if self.passwd == '456':
+            self._enable_auto_run = value
+        else:
+            raise ValueError
+
     def run(self):
         print('super fast')
     def auto_run(self):
         print('auto run')
-
-car = Car()
-car.run()
-print('###############################')
-toyotacar = ToyotaCar('lexus')
-print(toyotacar.model)
-toyotacar.run()
-print("################################")
-teslacar = TeslaCar('Model S')
-print(teslacar.model)
-teslacar.run()
-teslacar.auto_run()
